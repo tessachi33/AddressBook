@@ -39,7 +39,10 @@ public class Contact {
   public static ArrayList<Contact> all(){
     return instances;
   }
-
+  public int getId() {
+    return mId;
+  }
+  
   public static Contact find(int id){
     try {
       return instances.get(id - 1);

@@ -46,4 +46,10 @@ public class ContactTest {
     assertTrue(Contact.all().contains(myContact2));
   }
 
+    @Test
+   public void newId_contactInstantiateWithAnID_true() {
+    Contact myContact = new Contact("Teresa", "333", "555", "email@email.com");
+   assertEquals(Contact.all().size(), myContact.getId());
+   }
+
 }
