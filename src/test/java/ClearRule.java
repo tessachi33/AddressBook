@@ -6,7 +6,7 @@ public class ClearRule extends ExternalResource {
 
   protected void after() {
     Contact.clear();
-  //  AddressBook.clear();
+    AddressBook.clear();
   }
 
 }

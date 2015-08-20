@@ -1,0 +1,10 @@
+
+<h1>Online AddressBook Keeper</h1>
+
+
+<p><a href="/addressbooks/new">Add a new Address Book<a></p>
+
+
+  #foreach($addressbook in $addressbooks)
+  <h3><a href="/addressbooks/$addressbook.getId()">$addressbook.getUserName()</a></h3>
+  #end

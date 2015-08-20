@@ -1,0 +1,29 @@
+<p>Add a new contact to $addressbook.getUserName():</p>
+
+<form action="/contacts" method="post">
+  <input id="addressbookId" name="addressbookId" type="hidden" value="$addressbook.getId()">
+
+  <div class="form-group">
+  <label for="name">What is their name?</label>
+  <input id="name" name="name" type="text" class="form-control">
+</div>
+
+<div class="form-group">
+<label for="home">What is their home phone?</label>
+<input id="home" name="home" type="text" class="form-control">
+</div>
+
+<div class="form-group">
+<label for="cell">What is their cell phone?</label>
+<input id="cell" name="cell" type="text" class="form-control">
+</div>
+
+<div class="form-group">
+<label for="email">What is their email?</label>
+<input id="email" name="email" type="text" class="form-control">
+</div>
+
+
+
+  <button type="submit" class="btn btn-default">Add contact</button>
+</form>
