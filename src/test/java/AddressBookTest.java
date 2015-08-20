@@ -10,19 +10,19 @@ public class AddressBookTest {
     AddressBook testAddressBook = new AddressBook("Teresa");
     assertEquals("Teresa", testAddressBook.getUserName());
   }
-  //
-  // @Test
-  // public void getId_returnsCategoryId() {
-  //   Category testCategory = new Category("Home");
-  //   assertTrue(Category.all().size() == testCategory.getId());
-  // }
-  //
-  // @Test
-  // public void getTasks_initiallyReturnsEmptyArrayList() {
-  //   Category testCategory = new Category("Home");
-  //   assertTrue(testCategory.getTasks() instanceof ArrayList);
-  // }
-  //
+
+    @Test
+    public void getId_returnsAddressBookId() {
+      AddressBook testAddressBook = new AddressBook("Teresa");
+      assertTrue(AddressBook.all().size() == testAddressBook.getId());
+    }
+
+    @Test
+    public void getTasks_initiallyReturnsEmptyArrayList() {
+      AddressBook testAddressBook = new AddressBook("Teresa");
+      assertTrue(testAddressBook.getContacts() instanceof ArrayList);
+    }
+
   // @Test
   //   public void all_returnsAllInstancesOfCategories_true() {
   //     Category firstCategory = new Category("Home");
