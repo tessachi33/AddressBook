@@ -52,4 +52,23 @@ public class ContactTest {
    assertEquals(Contact.all().size(), myContact.getId());
    }
 
+   @Test
+   public void find_returnsContactWithSameId_secondTask() {
+     Contact myContact1 = new Contact("Teresa", "333", "555", "email@email.com");
+     Contact myContact2 = new Contact("Dave", "222", "666", "email@gmail.com");
+    assertEquals(Contact.find(myContact2.getId()), myContact2);
+    }
+  //
+  // @Test
+  // public void find_returnsNullWhenNoTaskFound_null() {
+  //   assertTrue(Task.find(999) == null);
+  //   }
+  //
+  // @Test
+  // public void clear_emptiesAllTasksFromArrayList() {
+  //   Task myTask = new Task("Mow the lawn");
+  //   Task.clear();
+  //   assertEquals(Task.all().size(), 0);
+  // }
+
 }
