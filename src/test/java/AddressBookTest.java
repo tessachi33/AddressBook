@@ -23,32 +23,32 @@ public class AddressBookTest {
       assertTrue(testAddressBook.getContacts() instanceof ArrayList);
     }
 
-  // @Test
-  //   public void all_returnsAllInstancesOfCategories_true() {
-  //     Category firstCategory = new Category("Home");
-  //     Category secondCategory = new Category("Dogs");
-  //     assertTrue(Category.all().contains(firstCategory));
-  //     assertTrue(Category.all().contains(secondCategory));
-  //   }
-  //
-  //   @Test
-  //   public void clear_removesAllCategoryInstancesFromMemory() {
-  //     Category testCategory = new Category("Home");
-  //     Category.clear();
-  //     assertEquals(Category.all().size(), 0);
-  //   }
-  //
-  //   @Test
-  //   public void find_returnsCategoryWithSameId() {
-  //     Category testCategory = new Category("Home");
-  //     assertEquals(Category.find(testCategory.getId()), testCategory);
-  //   }
-  //
-  //   @Test
-  //   public void addTask_addsTaskToList() {
-  //     Category testCategory = new Category("Bob's Used Tasks");
-  //     Task testTask = new Task("Mow the lawn");
-  //     testCategory.addTask(testTask);
-  //     assertTrue(testCategory.getTasks().contains(testTask));
-  //   }
+    @Test
+      public void all_returnsAllInstancesOfAddressBook_true() {
+        AddressBook testAddressBook1 = new AddressBook("Teresa");
+        AddressBook testAddressBook2 = new AddressBook("Alex");
+        assertTrue(AddressBook.all().contains(testAddressBook1));
+        assertTrue(AddressBook.all().contains(testAddressBook2));
+      }
+
+      @Test
+      public void clear_removesAllAddressBookInstancesFromMemory() {
+        AddressBook testAddressBook = new AddressBook("Alex");
+        AddressBook.clear();
+        assertEquals(AddressBook.all().size(), 0);
+      }
+
+    @Test
+    public void find_returnsAddressBookWithSameId() {
+      AddressBook testAddressBook = new AddressBook("Alex");
+      assertEquals(AddressBook.find(testAddressBook.getId()), testAddressBook);
+    }
+
+    @Test
+    public void addContact_addsContactToList() {
+      AddressBook testAddressBook = new AddressBook("Alex");
+      Contact testContact = new Contact("Teresa", "333", "555", "email@email.com");
+      testAddressBook.addContact(testContact);
+      assertTrue(testAddressBook.getContacts().contains(testContact));
+    }
   }
