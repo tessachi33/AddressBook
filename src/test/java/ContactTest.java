@@ -58,11 +58,11 @@ public class ContactTest {
      Contact myContact2 = new Contact("Dave", "222", "666", "email@gmail.com");
     assertEquals(Contact.find(myContact2.getId()), myContact2);
     }
-  //
-  // @Test
-  // public void find_returnsNullWhenNoTaskFound_null() {
-  //   assertTrue(Task.find(999) == null);
-  //   }
+
+  @Test
+  public void find_returnsNullWhenNoContactFound_null() {
+    assertTrue(Contact.find(999) == null);
+    }
   //
   // @Test
   // public void clear_emptiesAllTasksFromArrayList() {
