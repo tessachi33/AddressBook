@@ -63,12 +63,12 @@ public class ContactTest {
   public void find_returnsNullWhenNoContactFound_null() {
     assertTrue(Contact.find(999) == null);
     }
-  //
-  // @Test
-  // public void clear_emptiesAllTasksFromArrayList() {
-  //   Task myTask = new Task("Mow the lawn");
-  //   Task.clear();
-  //   assertEquals(Task.all().size(), 0);
-  // }
+
+  @Test
+  public void clear_emptiesAllContactFromArrayList() {
+    Contact myContact = new Contact("Teresa", "333", "555", "email@email.com");
+    Contact.clear();
+    assertEquals(Contact.all().size(), 0);
+  }
 
 }
